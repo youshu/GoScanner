@@ -47,7 +47,6 @@ func runScan(){
 	//等待线程终止
 	for;<-thread == 0;{
 		nowThread--
-		fmt.Println(nowThread);
 		if nowThread == 0{
 			//全部线程已终止,关闭结果写入,退出程序
 			close(result)
