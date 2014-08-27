@@ -8,7 +8,9 @@ import (
 "net"
 "os"
 )
-//扫描地址
+/**
+	扫描地址
+*/
 var ipAddrs chan string = make(chan string)
 //扫描结果
 var result chan string = make(chan string)
@@ -80,7 +82,7 @@ func nextIp(ip string) string{
 		n,_ := strconv.Atoi(ips[i])
 		if n >= 255{
 			//进位
-			ips[i] = "0"	
+			ips[i] = "1"	
 		}else{
 			//+1
 			n++
